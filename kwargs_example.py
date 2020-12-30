@@ -17,7 +17,7 @@ def killing_intervention(insecticide=None, killing_eff=1.0,
     iv_dict = base_intervention(parent_args=kwargs)
     if insecticide:
         iv_dict['insecticide'] = insecticide
-    iv_dict['killing_eff'] = killing_eff
+    iv_dict['killing_effectiveness'] = killing_eff
     return iv_dict
 
 
@@ -29,6 +29,7 @@ def blocking_killing_iv(insecticide=None, blocking_eff=1.0,
     iv_dict['blocking_effectiveness'] = blocking_eff
     iv_dict['killing_effectiveness'] = killing_eff
     return iv_dict
+
 
 if __name__ == "__main__":
     abstract1 = base_intervention()
